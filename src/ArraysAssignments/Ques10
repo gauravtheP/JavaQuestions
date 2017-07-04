@@ -1,0 +1,7 @@
+Ques10. Can you store String in an array of Integer in Java?
+        Compile time error or runtime exception?
+Ans. No, we cannot store String in an array of Integer in Java , otherwise, there is
+     no point of declaring the data-type of Arrays during its initialization.
+     It will show Compile Time error.
+     For example: int[] a = new int[10]; clearly specifies that integer has to be
+     stored in an array and not any other type.
