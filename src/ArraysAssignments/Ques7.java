@@ -13,14 +13,27 @@ public class Ques7 {
         System.out.println("Enter Array Size");
         int size = sc.nextInt();
         int[] arr = new int[size];
+        int[] arr2 = new int[size];
         System.out.println("Enter Array Elements");
         for(int i = 0; i<size; i++){
             arr[i] = sc.nextInt();
         }
-        System.out.print("Reverse array: ");
-        for(int j = size-1; j>=1; j--){
-            System.out.print(arr[j]+ ", ");
+
+        for(int i = 0, j = size-1; j>=0; j--){
+            arr2[i] = arr[j];
+            if(i<size-1) {
+                i++;
+            }
         }
-        System.out.print(arr[0]);
+
+        for(int i = 0; i<size; i++){
+            arr[i] = arr2[i];
+        }
+
+        System.out.print("Reversed array: ");
+        for(int i = 0; i<size-1; i++){
+            System.out.print(arr[i]+", ");
+        }
+            System.out.print(arr[size-1]);
     }
 }
