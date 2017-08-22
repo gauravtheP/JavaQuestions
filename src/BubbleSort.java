@@ -19,14 +19,19 @@ public class BubbleSort {
         }
     }
     private static void sorting(int[] Array, int size){
-        int count = 0;
+        int count = 0, swapped;
         for(int i = 0; i<size; i++){
+            swapped = 0;
             for(int j = 0; j<(size-1)-i; j++){
                 if(Array[j]>Array[j+1]){
                     int temp = Array[j];
                     Array[j] = Array[j+1];
                     Array[j+1] = temp;
+                    swapped = 1;
                 }
+            }
+            if(swapped==0){
+                break;
             }
             count++;
             System.out.print("Array after iteration "+count+":  ");
